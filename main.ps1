@@ -9,7 +9,7 @@ function ProcessOpen {
     return $processes.Count -gt 0
 }
 
-'Getting latets data...'
+'Getting latest data...'
 # Gets data for downgrading
 $latestData = (Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/altacountbabi/ps-downgrader/main/data.json').Content | ConvertFrom-Json
 $rbxAppxPackage = Get-AppxPackage | Where-Object  { $_.Name -like '*ROBLOXCORPORATION.ROBLOX*' }
