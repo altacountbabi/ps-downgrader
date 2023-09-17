@@ -1,4 +1,3 @@
-
 # checks if an app is open
 function ProcessOpen {
     param (
