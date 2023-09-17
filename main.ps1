@@ -13,7 +13,7 @@ function ProcessOpen {
 # Gets data for downgrading
 $latestData = (Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/altacountbabi/ps-downgrader/main/data.json').Content | ConvertFrom-Json
 $rbxAppxPackage = Get-AppxPackage | Where-Object  { $_.Name -like '*ROBLOXCORPORATION.ROBLOX*' }
-$rbxVersion = [System.Version]::Parse($rbxAppxPackage.Version).Minor -or 0
+$rbxVersion = [System.Version]::Parse($rbxAppxPackage.Version).Minor
 $bundleVersion = $latestData.bundleVersion
 $bundleDownload = $latestData.bundleDownload
 
